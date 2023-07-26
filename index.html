@@ -1,69 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <title>Java Script Quiz</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-  </head>
-
+<html>
+<head>
+  <title>Javascript quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-    <h1>Try to get all five!</h1>
-    <div class ="question">
-        <h2>In Java, what is a block of code that, when called, performs specific actions mentioned in it?</h2>
-    </div>
-        <div class ="answer">
-            <p>
-                A method
-            </p>
-            <p>
-                An element
-            </p>        
-        </div>
-        <div class= "question">
-            <h2>In Java, how would you insert a new node or reposition an existing node as the last child of a particular parent node </h2>
-        </div>    
-            <div class ="answer">
-                <p>
-                    Append Child
-                </p>
-                <P>
-                    Add Event Listener
-                </p>
-                </div>
-            <div class ="question">
-                <h2>In Java, what is a software intermediary that allows two applications to talk to each other?</h2>
-            </div>
-                <div class ="answer">
-                    <p>
-                        A jquery  
-                    </p>
-                    <p>
-                        An API (An application programming interface)
-                    </p>
-                </div>
-                <div class ="question">
-                    <h2>In Java, what is a way that you can wait for user interaction like a click or keypress?</h2>
-                </div>
-                <div class ="anwer">
-                    <p>
-                        Add an event listner
-                    </p>
-                    <p>
-                        Adding a psudo class
-                    </p>
-                </div>
-            <div class ="question">
-                <h2>In Java, what is a set of statements that performs a task or calculates a value?</h2>
-            </div>
-            <div class = "answer">
-                <p>
-                    A function
-                </p>
-                <p>
-                    An iteration
-                </p>
-            </div>
-
+  <div id="start-container">
+    <h1>Code Quiz</h1>
+    <button id="start">Start Quiz</button>
+  </div>
+  <div id="quiz-container">
+    <div id="question"></div>
+    <ul id="options"></ul>
+    <p id="timer">Time: <span id="time-left">40</span> seconds</p>
+  </div>
+  <div id="result-container">
+    <h2>Results</h2>
+    <p id="score">Score: 0</p>
+    <input type="text" id="initials" placeholder="Enter your initials">
+    <button id="save-score">Save Score</button>
+  </div>
+  <script src="script.js"></script>
 </body>
+</html>

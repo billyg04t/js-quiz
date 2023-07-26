@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>High Scores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>High Scores</h1>
+  <ul id="high-scores-list"></ul>
+
+  <script>
+    const highScoresList = document.getElementById("high-scores-list");
+
+    // Retrieve high scores from local storage
+    const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+    // Sort the high scores in descending order
+    highScores.sort((a, b) => b.score - a.score);
+    // Display the high scores on the page
+    highScores.forEach((scoreData) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${scoreData.initials}: ${scoreData.score}`;
+      highScoresList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
